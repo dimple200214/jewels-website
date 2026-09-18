@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewels & Journey | Fine Jewellery Design by Neha Suresh Naik</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#C5A059',
+                        goldDark: '#9E7B3B',
+                        champagne: '#FAF7F2',
+                        onyx: '#1A1A1A'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FAF7F2; color: #1A1A1A; font-family: 'Montserrat', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .gold-gradient { background: linear-gradient(135deg, #C5A059 0%, #E2C786 50%, #9E7B3B 100%); }
+        .gold-text { background: linear-gradient(135deg, #A88238 0%, #C5A059 50%, #836224 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <svg class="w-8 h-8 text-gold" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M25 25 C10 10, 10 40, 25 25 C40 10, 40 40, 25 25 Z" transform="translate(25, 0)"/>
+                    <polygon points="50,10 55,18 45,18" fill="currentColor"/>
+                </svg>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl tracking-widest text-onyx font-normal uppercase">Jewels & Journey</span>
+                    <span class="text-[9px] tracking-[0.25em] text-gold uppercase">Fine Jewellery Design</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-xs tracking-widest uppercase text-onyx/80">
+                <a href="#about" class="hover:text-gold transition">About Neha</a>
+                <a href="#studio" class="hover:text-gold transition">Interactive Studio</a>
+                <a href="#craft" class="hover:text-gold transition">Craftsmanship</a>
+                <a href="#portfolio" class="hover:text-gold transition">Portfolio</a>
+                <a href="#contact" class="hover:text-gold transition">Contact</a>
+            </nav>
+
+            <a href="https://wa.me/919004247057?text=Hello%20Neha,%20I%20would%20like%20to%20discuss%20a%20custom%20jewellery%20design." 
+               target="_blank" 
+               class="gold-gradient text-white text-xs uppercase tracking-widest px-5 py-2.5 rounded-full shadow-md hover:opacity-90 transition flex items-center gap-2">
+               <i data-lucide="message-circle" class="w-4 h-4"></i> Book Consultation
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center justify-center px-6 py-16">
+        <div class="max-w-5xl mx-auto text-center space-y-6">
+            <p class="text-gold uppercase tracking-[0.3em] text-xs font-semibold">Designing Elegance. Crafting Stories.</p>
+            <h1 class="font-serif text-5xl md:text-7xl font-light text-onyx leading-tight">
+                Bespoke Jewellery Designs <br><span class="italic font-normal gold-text">Tailored To Your Journey</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-600 text-sm md:text-base leading-relaxed font-light">
+                Blending traditional artistry with modern software precision. Specializing in intricate, high-detail fine jewellery CAD designs and manual illustrations.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-6">
+                <a href="#studio" class="gold-gradient text-white text-xs uppercase tracking-widest px-8 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transition">
+                    Launch Interactive Studio
+                </a>
+                <a href="#portfolio" class="border border-gold text-onyx text-xs uppercase tracking-widest px-8 py-4 rounded-full font-medium hover:bg-gold/10 transition">
+                    View Portfolio
+                </a>
+            </div>
+
+            <!-- Visual Canvas Interactive Teaser -->
+            <div class="pt-12 max-w-lg mx-auto">
+                <div class="bg-white p-6 rounded-2xl shadow-xl border border-gold/20">
+                    <canvas id="heroRingCanvas" width="300" height="200" class="mx-auto"></canvas>
+                    <p class="text-xs text-gray-500 mt-2 font-serif italic">Dynamic 2D/3D Ring Concept Visualizer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Neha Suresh Naik -->
+    <section id="about" class="py-20 bg-white border-y border-gold/10">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">The Designer</span>
+                <h2 class="font-serif text-4xl text-onyx">Neha Suresh Naik</h2>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    "I’m a manual jewellery designer who specializes in intricate designs with a focus on fine details. Every piece I create is a reflection of elegance, precision, and timeless craftsmanship."
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Working extensively with industry-standard software like **CorelDRAW** and **Procreate**, I bring vision to life—blending traditional artistry with modern technology to design jewellery that tells a story and creates a lasting impression.
+                </p>
+
+                <!-- Software Expertise Badges -->
+                <div class="pt-4 flex flex-wrap gap-3">
+                    <span class="bg-champagne text-onyx border border-gold/30 px-4 py-2 rounded-full text-xs font-medium flex items-center gap-2">
+                        <i data-lucide="pen-tool" class="w-4 h-4 text-gold"></i> Manual Design
+                    </span>
+                    <span class="bg-champagne text-onyx border border-gold/30 px-4 py-2 rounded-full text-xs font-medium flex items-center gap-2">
+                        <i data-lucide="layers" class="w-4 h-4 text-gold"></i> CorelDRAW
+                    </span>
+                    <span class="bg-champagne text-onyx border border-gold/30 px-4 py-2 rounded-full text-xs font-medium flex items-center gap-2">
+                        <i data-lucide="layout" class="w-4 h-4 text-gold"></i> Procreate
+                    </span>
+                </div>
+            </div>
+
+            <div class="bg-champagne p-8 rounded-2xl border border-gold/20 shadow-sm relative">
+                <div class="space-y-4">
+                    <h3 class="font-serif text-2xl text-onyx">Atelier Location</h3>
+                    <p class="text-sm text-gray-600 flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i> Mumbai, Maharashtra, India
+                    </p>
+                    <p class="text-sm text-gray-600 flex items-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4 text-gold"></i> nehanaik367@gmail.com
+                    </p>
+                    <p class="text-sm text-gray-600 flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-gold"></i> +91 9004247057
+                    </p>
+                    <p class="text-sm text-gray-600 flex items-center gap-2">
+                        <i data-lucide="instagram" class="w-4 h-4 text-gold"></i> @1710_neha_jd
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Studio Configurator -->
+    <section id="studio" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Interactive Studio</span>
+                <h2 class="font-serif text-4xl text-onyx">Customize Your Solitaire Concept</h2>
+                <p class="text-gray-600 text-sm">Select metals and gemstones to generate a bespoke CAD briefing sheet instantly.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-gold/20 shadow-xl grid md:grid-cols-2 gap-8 items-center">
+                <!-- Visual Canvas -->
+                <div class="bg-champagne p-6 rounded-2xl flex flex-col items-center justify-center border border-gold/10">
+                    <canvas id="interactiveCanvas" width="280" height="280" class="drop-shadow-lg"></canvas>
+                    <span id="canvasLabel" class="text-xs font-serif italic text-gray-500 mt-4">18K Yellow Gold with Solitaire Diamond</span>
+                </div>
+
+                <!-- Controls -->
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-gray-500 font-semibold mb-2">Precious Metal</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button onclick="setMetal('gold')" class="border border-gold text-xs py-2 rounded-lg hover:bg-gold hover:text-white transition focus:ring-2 focus:ring-gold">Yellow Gold</button>
+                            <button onclick="setMetal('rose')" class="border border-gold text-xs py-2 rounded-lg hover:bg-gold hover:text-white transition focus:ring-2 focus:ring-gold">Rose Gold</button>
+                            <button onclick="setMetal('platinum')" class="border border-gold text-xs py-2 rounded-lg hover:bg-gold hover:text-white transition focus:ring-2 focus:ring-gold">Platinum</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-gray-500 font-semibold mb-2">Center Gemstone Cut</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button onclick="setGem('diamond')" class="border border-gold text-xs py-2 rounded-lg hover:bg-gold hover:text-white transition">Diamond</button>
+                            <button onclick="setGem('emerald')" class="border border-gold text-xs py-2 rounded-lg hover:bg-gold hover:text-white transition">Emerald</button>
+                            <button onclick="setGem('ruby')" class="border border-gold text-xs py-2 rounded-lg hover:bg-gold hover:text-white transition">Ruby</button>
+                        </div>
+                    </div>
+
+                    <button onclick="sendWhatsAppCustomOrder()" class="w-full gold-gradient text-white py-3.5 rounded-xl uppercase tracking-widest text-xs font-semibold shadow-lg hover:opacity-95 transition flex items-center justify-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i> Request CAD Design on WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-onyx text-white py-12 border-t border-gold/30">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div>
+                <h3 class="font-serif text-2xl tracking-widest uppercase">Jewels & Journey</h3>
+                <p class="text-gold text-xs tracking-widest uppercase">Fine Jewellery Design by Neha Suresh Naik</p>
+                <p class="text-xs text-gray-400 mt-2">Mumbai, Maharashtra | +91 9004247057</p>
+            </div>
+            <p class="text-xs text-gray-500">&copy; 2026 Jewels & Journey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Canvas Script -->
+    <script>
+        lucide.createIcons();
+
+        let currentMetal = 'gold';
+        let currentGem = 'diamond';
+
+        const metalColors = {
+            gold: '#D4AF37',
+            rose: '#E8A798',
+            platinum: '#E5E4E2'
+        };
+
+        const gemColors = {
+            diamond: '#E0F7FA',
+            emerald: '#50C878',
+            ruby: '#E0115F'
+        };
+
+        function drawRing(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2 + 10;
+
+            // Draw Band
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 55, 0, Math.PI * 2);
+            ctx.lineWidth = 10;
+            ctx.strokeStyle = metalColors[currentMetal];
+            ctx.stroke();
+
+            // Inner Ring Accent
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 50, 0, Math.PI * 2);
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.stroke();
+
+            // Draw Gemstone Setting
+            ctx.beginPath();
+            ctx.moveTo(centerX - 18, centerY - 55);
+            ctx.lineTo(centerX + 18, centerY - 55);
+            ctx.lineTo(centerX + 25, centerY - 75);
+            ctx.lineTo(centerX, centerY - 95);
+            ctx.lineTo(centerX - 25, centerY - 75);
+            ctx.closePath();
+
+            ctx.fillStyle = gemColors[currentGem];
+            ctx.fill();
+            ctx.lineWidth = 1.5;
+            ctx.strokeStyle = '#1A1A1A';
+            ctx.stroke();
+        }
+
+        function setMetal(metal) {
+            currentMetal = metal;
+            drawRing('interactiveCanvas');
+            drawRing('heroRingCanvas');
+            updateLabel();
+        }
+
+        function setGem(gem) {
+            currentGem = gem;
+            drawRing('interactiveCanvas');
+            drawRing('heroRingCanvas');
+            updateLabel();
+        }
+
+        function updateLabel() {
+            const label = document.getElementById('canvasLabel');
+            if (label) {
+                label.innerText = `${currentMetal.toUpperCase()} Band with ${currentGem.toUpperCase()} Center Stone`;
+            }
+        }
+
+        function sendWhatsAppCustomOrder() {
+            const text = `Hello Neha! I customized a design on your website: ${currentMetal.toUpperCase()} ring with a ${currentGem.toUpperCase()} gemstone. I would like to get a CAD blueprint consultation.`;
+            window.open(`https://wa.me/919004247057?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // Initialize on Load
+        window.onload = function() {
+            drawRing('heroRingCanvas');
+            drawRing('interactiveCanvas');
+        };
+    </script>
+</body>
+</html>
