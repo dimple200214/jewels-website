@@ -30,10 +30,23 @@
         }
     </script>
     <style>
-        body { background-color: #FAF7F2; color: #1A1A1A; font-family: 'Montserrat', sans-serif; }
-        h1, h2, h3, .font-serif { font-family: 'Cormorant Garamond', serif; }
-        .gold-gradient { background: linear-gradient(135deg, #C5A059 0%, #E2C786 50%, #9E7B3B 100%); }
-        .gold-text { background: linear-gradient(135deg, #A88238 0%, #C5A059 50%, #836224 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { 
+            background-color: #FAF7F2; 
+            color: #1A1A1A; 
+            font-family: 'Montserrat', sans-serif; 
+        }
+        h1, h2, h3, .font-serif { 
+            font-family: 'Cormorant Garamond', serif; 
+        }
+        .gold-gradient { 
+            background: linear-gradient(135deg, #C5A059 0%, #E2C786 50%, #9E7B3B 100%); 
+        }
+        .gold-text { 
+            background: linear-gradient(135deg, #A88238 0%, #C5A059 50%, #836224 100%); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -56,7 +69,6 @@
                 <a href="#about" class="hover:text-gold transition">About Neha</a>
                 <a href="#studio" class="hover:text-gold transition">Interactive Studio</a>
                 <a href="#craft" class="hover:text-gold transition">Craftsmanship</a>
-                <a href="#portfolio" class="hover:text-gold transition">Portfolio</a>
                 <a href="#contact" class="hover:text-gold transition">Contact</a>
             </nav>
 
@@ -76,15 +88,15 @@
                 Bespoke Jewellery Designs <br><span class="italic font-normal gold-text">Tailored To Your Journey</span>
             </h1>
             <p class="max-w-2xl mx-auto text-gray-600 text-sm md:text-base leading-relaxed font-light">
-                Blending traditional artistry with modern software precision. Specializing in intricate, high-detail fine jewellery CAD designs and manual illustrations.
+                Blending traditional artistry with modern technology. Specializing in intricate, high-detail fine jewellery CAD designs and manual illustrations.
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4 pt-6">
                 <a href="#studio" class="gold-gradient text-white text-xs uppercase tracking-widest px-8 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transition">
                     Launch Interactive Studio
                 </a>
-                <a href="#portfolio" class="border border-gold text-onyx text-xs uppercase tracking-widest px-8 py-4 rounded-full font-medium hover:bg-gold/10 transition">
-                    View Portfolio
+                <a href="#about" class="border border-gold text-onyx text-xs uppercase tracking-widest px-8 py-4 rounded-full font-medium hover:bg-gold/10 transition">
+                    Know The Designer
                 </a>
             </div>
 
@@ -92,7 +104,7 @@
             <div class="pt-12 max-w-lg mx-auto">
                 <div class="bg-white p-6 rounded-2xl shadow-xl border border-gold/20">
                     <canvas id="heroRingCanvas" width="300" height="200" class="mx-auto"></canvas>
-                    <p class="text-xs text-gray-500 mt-2 font-serif italic">Dynamic 2D/3D Ring Concept Visualizer</p>
+                    <p class="text-xs text-gray-500 mt-2 font-serif italic">Dynamic 2D Solitaire Ring Visualizer</p>
                 </div>
             </div>
         </div>
@@ -104,11 +116,13 @@
             <div class="space-y-6">
                 <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">The Designer</span>
                 <h2 class="font-serif text-4xl text-onyx">Neha Suresh Naik</h2>
+                <p class="text-xs uppercase tracking-widest text-gold font-medium">Jewellery Designer</p>
+                
                 <p class="text-gray-600 text-sm leading-relaxed">
-                    "I’m a manual jewellery designer who specializes in intricate designs with a focus on fine details. Every piece I create is a reflection of elegance, precision, and timeless craftsmanship."
+                    "I'm a manual jewellery designer who specializes in intricate designs with a focus on fine details. Every piece I create is a reflection of elegance, precision, and timeless craftsmanship."
                 </p>
                 <p class="text-gray-600 text-sm leading-relaxed">
-                    Working extensively with industry-standard software like **CorelDRAW** and **Procreate**, I bring vision to life—blending traditional artistry with modern technology to design jewellery that tells a story and creates a lasting impression.
+                    I work extensively with software like <strong>CorelDRAW</strong> and <strong>Procreate</strong> to bring my vision to life—blending traditional artistry with modern technology to design jewellery that tells a story and creates a lasting impression.
                 </p>
 
                 <!-- Software Expertise Badges -->
@@ -125,22 +139,23 @@
                 </div>
             </div>
 
-            <div class="bg-champagne p-8 rounded-2xl border border-gold/20 shadow-sm relative">
-                <div class="space-y-4">
-                    <h3 class="font-serif text-2xl text-onyx">Atelier Location</h3>
-                    <p class="text-sm text-gray-600 flex items-center gap-2">
-                        <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i> Mumbai, Maharashtra, India
-                    </p>
-                    <p class="text-sm text-gray-600 flex items-center gap-2">
-                        <i data-lucide="mail" class="w-4 h-4 text-gold"></i> nehanaik367@gmail.com
-                    </p>
-                    <p class="text-sm text-gray-600 flex items-center gap-2">
-                        <i data-lucide="phone" class="w-4 h-4 text-gold"></i> +91 9004247057
-                    </p>
-                    <p class="text-sm text-gray-600 flex items-center gap-2">
-                        <i data-lucide="instagram" class="w-4 h-4 text-gold"></i> @1710_neha_jd
-                    </p>
-                </div>
+            <div class="bg-champagne p-8 rounded-2xl border border-gold/20 shadow-sm relative space-y-4">
+                <h3 class="font-serif text-2xl text-onyx border-b border-gold/20 pb-3">Contact & Atelier Info</h3>
+                <p class="text-sm text-gray-700 flex items-center gap-3">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-gold"></i> Mumbai, Maharashtra
+                </p>
+                <p class="text-sm text-gray-700 flex items-center gap-3">
+                    <i data-lucide="phone" class="w-5 h-5 text-gold"></i> +91 9004247057
+                </p>
+                <p class="text-sm text-gray-700 flex items-center gap-3">
+                    <i data-lucide="mail" class="w-5 h-5 text-gold"></i> nehanaik367@gmail.com
+                </p>
+                <p class="text-sm text-gray-700 flex items-center gap-3">
+                    <i data-lucide="globe" class="w-5 h-5 text-gold"></i> www.jewelsandjourney.com
+                </p>
+                <p class="text-sm text-gray-700 flex items-center gap-3">
+                    <i data-lucide="instagram" class="w-5 h-5 text-gold"></i> 1710_neha_jd
+                </p>
             </div>
         </div>
     </section>
